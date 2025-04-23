@@ -1,0 +1,259 @@
+
+/* CSS Comments */
+
+/* CSS Variables & Fallbacks */
+:root {
+  --primary-color: #3498db;
+  --text-color: #333;
+}
+
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+}
+
+/* Color */
+body {
+  color: var(--text-color, black); /* with fallback */
+  background-color: #f9f9f9;
+}
+
+h1 {
+  color: rgb(30, 50, 90);
+}
+
+h2 {
+  color: #2c3e50;
+}
+
+h3 {
+  color: hsl(210, 50%, 40%);
+}
+
+footer {
+  background-color: color-mix(in srgb, #333 80%, white);
+}
+
+/* Background */
+header {
+  background-color: #f0f0f0;
+}
+
+/* Units - Relative */
+p {
+  font-size: 1em;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Units - Absolute */
+hr {
+  width: 80%;
+  height: 2px;
+  margin: 20px auto;
+}
+
+img {
+  max-width: 500px;
+  min-width: 200px;
+}
+
+fieldset {
+  padding: 15px;
+}
+
+/* Box Model - Margin (long) */
+#INFO {
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+/* Box Model - Margin (short) */
+#PLANS {
+  margin: 20px 10px 20px 10px;
+}
+
+/* Box Model - Padding (long) */
+#OTHER {
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+}
+
+/* Box Model - Padding (short) */
+#media {
+  padding: 15px 10px 15px 10px;
+}
+
+/* Border (long) */
+details {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ddd;
+  border-radius: 5px;
+}
+
+/* Border (short) */
+form {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Text properties */
+legend {
+  text-decoration: underline;
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Display properties */
+span {
+  display: none;
+}
+
+summary {
+  display: block;
+}
+
+nav a {
+  display: inline-block;
+}
+
+details {
+  display: block;
+}
+
+/* Layouts - Flexbox */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layouts - Grid */
+#PLANS {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+#PLANS h2 {
+  grid-column: 1 / 3;
+}
+
+/* Position */
+footer {
+  position: relative;
+}
+
+form {
+  position: sticky;
+  top: 20px;
+}
+
+/* Pseudo-classes */
+a:hover {
+  color: #e74c3c;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Class Selector */
+.highlighted {
+  background-color: #fff3cd;
+}
+
+/* ID Selector */
+#INFO {
+  background-color: #e3f2fd;
+}
+
+/* Element Selector */
+button {
+  cursor: pointer;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+  padding: 8px;
+}
+
+/* Pseudo-class Selector */
+li:first-child {
+  font-weight: bold;
+}
+
+/* Selector List */
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+}
+
+/* Descendant Combinator */
+section ul {
+  list-style-type: square;
+}
+
+/* Child Combinator */
+nav > a {
+  text-decoration: none;
+}
+
+/* General Sibling Combinator */
+h2 ~ p {
+  font-style: italic;
+}
+
+/* Adjacent Sibling Combinator */
+h2 + p {
+  margin-top: 10px;
+}
+
+/* Combining Two Selectors */
+li.highlighted {
+  border-left: 3px solid #ffd600;
+}
+
+/* New :has() selector */
+li:has(em) {
+  background-color: #ffebee;
+}
+
+/* Nested Selectors */
+@media (min-width: 768px) {
+  header {
+    & nav {
+      padding: 5px;
+    }
+  }
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  #PLANS {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+}
